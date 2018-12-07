@@ -1,0 +1,16 @@
+
+
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+
+$maintext: #151515;
+$fond: #ffffff;
+
+body {
+  margin: 0;
+  background-color: $fond;
+}
+
+h1 {
+  color: $maintext;
+}
