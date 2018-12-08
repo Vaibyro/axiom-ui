@@ -1,0 +1,41 @@
+.btn {
+  border-radius: 50px;
+  padding: 10px 16px 10px 16px;
+  border: none;
+  margin: 4px;
+  display: inline-block;
+  font-size: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  transition: box-shadow 0.150s;
+}
+
+// Generate all flat versions
+@each $color, $value in $main-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+// Generate all colors versions
+@each $color, $value in $main-gd-colors {
+  .btn-gd-#{$color} {
+    @include button-variant(nth($value, 1), nth($value, 2));
+  }
+}
+
+// todo
+.btn2 {
+  border-radius: 50px;
+  padding: 8px 14px 8px 14px;
+  margin: 10px;
+  font-size: 12px;
+  color: #ff4957;
+  cursor: pointer;
+  border: solid #ff4957 2px;
+  background: transparent;
+}

@@ -1,6 +1,21 @@
 @charset "UTF-8";
 
+
 @import "components/variables";
 @import "components/typography";
+
+// Init
+@import "components/init";
+
+// Mixins and utilities
+@import "components/mixins";
+@import "components/utilities";
+
+// Components
+@import "components/pane";
+@import "components/buttons";
+@import "components/form-controls";
+@import "components/alerts";
+@import "components/badges";
 
 

@@ -1,0 +1,23 @@
+@mixin button-variant($background, $color) {
+  background: $background;
+
+  &:hover,
+  &.hover {
+    box-shadow: 0 1px 8px 0 rgba($color, 0.6);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 2px 0 rgba($color, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4);
+  }
+
+  &.disabled,
+  &:disabled {
+    // TODO
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    box-shadow: 0 0 3px 0 rgba($color, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4);
+  }
+}

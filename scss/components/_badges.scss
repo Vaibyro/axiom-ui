@@ -1,0 +1,21 @@
+
+
+.badge {
+  padding: 1px 8px 3px 8px;
+  background: #eeeeee;
+  border-radius: 12px;
+}
+
+@each $color, $value in $main-colors {
+  .badge-#{$color} {
+    @include badge-variant($value, map_get($main-font-colors, $color));
+  }
+}
+
+@each $color, $value in $main-gd-colors {
+  .badge-gd-#{$color} {
+    @include badge-variant($value, map_get($main-font-colors, $color));
+  }
+}
+
+
