@@ -6,6 +6,7 @@ let autoprefixer = require('autoprefixer');
 let cleanCSS = require('gulp-clean-css');
 let browserSync = require('browser-sync');
 let gulpCopy = require('gulp-copy');
+var rename = require('gulp-rename');
 
 gulp.task('sass', function () {
     return gulp.src('./scss/axiom-ui.scss')
@@ -24,6 +25,9 @@ gulp.task('autoprefixer', ['sass'], function () {
 gulp.task('minify', ['autoprefixer'], function () {
     return gulp.src('./dist/css/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest('./dist/css/'));
 });
 
