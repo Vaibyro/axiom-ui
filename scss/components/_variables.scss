@@ -1,29 +1,39 @@
-$maintext: #151515;
-$fond: #ffffff;
 
-body {
-  margin: 0;
-  background-color: $fond;
-}
 
-h1 {
-  color: $maintext;
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid #cecdcd;
-
-  // Margins
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-$round-radius: 20px; // todo ajuster
+$round-radius: 19px; // todo ajuster
 
 /**
     Colors -------------------------------------------------------------------------------------------------------------
  */
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+                (
+                        "100": $gray-100,
+                        "200": $gray-200,
+                        "300": $gray-300,
+                        "400": $gray-400,
+                        "500": $gray-500,
+                        "600": $gray-600,
+                        "700": $gray-700,
+                        "800": $gray-800,
+                        "900": $gray-900
+                ),
+                $grays
+);
 
 $blue: #0656f1 !default;
 $indigo: #3230f1 !default;
@@ -101,6 +111,28 @@ $main-gd-colors: map-merge(
                 $main-gd-colors
 );
 
+/**
+  Options --------------------------------------------------------------------------------------------------------------
+ */
+
+$enable-caret:                                true !default;
+$enable-rounded:                              true !default;
+$enable-shadows:                              false !default;
+$enable-gradients:                            false !default;
+$enable-transitions:                          true !default;
+$enable-prefers-reduced-motion-media-query:   true !default;
+$enable-hover-media-query:                    false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:                         true !default;
+$enable-print-styles:                         true !default;
+$enable-validation-icons: true !default;
+
+/**
+  Body -----------------------------------------------------------------------------------------------------------------
+ */
+
+
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
 
 /**
   Grid breakpoints -----------------------------------------------------------------------------------------------------
@@ -145,6 +177,16 @@ $spacers: map-merge(
  */
 
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-stack-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
 
 $paragraph-margin-bottom: 1rem !default;
 
@@ -158,3 +200,26 @@ $h3-font-size: $font-size-base * 2 !default;
 $h4-font-size: $font-size-base * 1.8 !default;
 $h5-font-size: $font-size-base * 1.6 !default;
 $h6-font-size: $font-size-base * 1.3 !default;
+
+/**
+  Grid containers ------------------------------------------------------------------------------------------------------
+ */
+
+$container-max-widths: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$container-max-widths: map-merge(
+                (
+                        sm: 540px,
+                        md: 720px,
+                        lg: 960px,
+                        xl: 1140px
+                ),
+                $container-max-widths
+);
+
+/**
+  Grid columns ---------------------------------------------------------------------------------------------------------
+ */
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;

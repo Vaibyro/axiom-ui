@@ -6,9 +6,10 @@ let autoprefixer = require('autoprefixer');
 let cleanCSS = require('gulp-clean-css');
 let browserSync = require('browser-sync');
 let gulpCopy = require('gulp-copy');
-var rename = require('gulp-rename');
+let rename = require('gulp-rename');
+let clean = require('gulp-clean');
 
-gulp.task('sass', function () {
+gulp.task('sass', ['clean-test', 'clean-dist'], function () {
     return gulp.src('./scss/axiom-ui.scss')
         .pipe(sass())
         .pipe(gulp.dest('./build/css/'))
@@ -54,8 +55,17 @@ gulp.task('refresh', function () {
     })
 });
 
+gulp.task('clean-dist', function () {
+    return gulp.src('dist/css/*', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('clean-test', function () {
+    return gulp.src('test/html/css/*', {read: false})
+        .pipe(clean());
+});
 
 gulp.task('watch', ['copy', 'browserSync'], function() {
-    gulp.watch('./scss/**/*.scss', ['sass', 'autoprefixer', 'minify', 'copy']);
+    gulp.watch('./scss/**/*.scss', ['clean-test', 'clean-dist', 'sass', 'autoprefixer', 'minify', 'copy']);
     //gulp.watch('./test/html/*.html', ['refresh']);
 });

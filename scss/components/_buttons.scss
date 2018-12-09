@@ -1,5 +1,5 @@
 .btn {
-  border-radius: 50px;
+  border-radius: $round-radius;
   padding: 10px 16px 10px 16px;
   border: none;
   margin: 4px;
@@ -7,11 +7,15 @@
   font-size: 12px;
   color: $font-light;
   cursor: pointer;
-  outline: none;
+  outline: 0;
   text-align: center;
   vertical-align: middle;
   user-select: none;
   transition: box-shadow 0.150s;
+
+  &:focus, &.focus {
+    outline: 0 !important;
+  }
 }
 
 // Generate all flat versions
