@@ -2,13 +2,12 @@
 
 
 @import "components/variables";
+@import "components/mixins";
 @import "components/typography";
 
 // Init
 @import "components/init";
 
-// Mixins and utilities
-@import "components/mixins";
 @import "components/utilities";
 
 // Components

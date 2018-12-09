@@ -1,0 +1,11 @@
+@mixin font-size-multiplier($font-size) {
+  @media only screen and (min-width: 0) {
+    font-size: $font-size * 1.1;
+  }
+  @media only screen and (min-width: map-get($grid-breakpoints, lg)) {
+    font-size: $font-size * 1.05;
+  }
+  @media only screen and (min-width: map-get($grid-breakpoints, xl)) {
+    font-size: $font-size;
+  }
+}

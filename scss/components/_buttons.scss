@@ -4,7 +4,7 @@
   border: none;
   margin: 4px;
   display: inline-block;
-  font-size: 12px;
+  @include font-size-multiplier($font-size-base);
   color: $font-light;
   cursor: pointer;
   outline: 0;
