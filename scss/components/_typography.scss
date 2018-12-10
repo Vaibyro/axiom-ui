@@ -7,10 +7,19 @@
 
 body {
   font-family: $font-stack;
-
   @include font-size-multiplier($font-size-base);
-
   font-weight: $font-weight-base;
+}
+
+// TODO: a mettre autre part
+.dark {
+  color: $font-light;
+  background-color: #1a1a1a;
+}
+
+.light {
+  color: $font-dark;
+  background-color: #ffffff;
 }
 
 a {

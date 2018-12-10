@@ -41,6 +41,14 @@ body {
     body {
       font-size: 0.9rem; } }
 
+.dark {
+  color: #ffffff;
+  background-color: #1a1a1a; }
+
+.light {
+  color: #292929;
+  background-color: #ffffff; }
+
 a {
   text-decoration: none; }
 
@@ -2448,8 +2456,13 @@ template {
 
 .pane {
   border-radius: 25px;
-  border: 1px solid #dbdbdb;
-  padding: 10px 16px 10px 16px; }
+  padding: 16px 16px 16px 16px; }
+
+.dark .pane {
+  border: 2px solid #636363; }
+
+.light .pane {
+  border: 2px solid #dbdbdb; }
 
 .btn {
   border-radius: 25px;
@@ -2504,13 +2517,13 @@ template {
     box-shadow: 0 0 3px 0 rgba(220, 45, 55, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
 
 .btn-warning {
-  background: #ffc915; }
+  background: #f18c3b; }
   .btn-warning:hover, .btn-warning.hover {
-    box-shadow: 0 1px 8px 0 rgba(255, 201, 21, 0.6); }
+    box-shadow: 0 1px 8px 0 rgba(241, 140, 59, 0.6); }
   .btn-warning:focus, .btn-warning.focus {
-    box-shadow: 0 0 2px 0 rgba(255, 201, 21, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 0 2px 0 rgba(241, 140, 59, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
   .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active {
-    box-shadow: 0 0 3px 0 rgba(255, 201, 21, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 0 3px 0 rgba(241, 140, 59, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
 
 .btn-success {
   background: #1da739; }
@@ -2567,7 +2580,7 @@ template {
     box-shadow: 0 0 3px 0 rgba(149, 33, 226, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
 
 .btn-gd-warning {
-  background: linear-gradient(135deg, #ffc915 0%, #f17c35 100%); }
+  background: linear-gradient(135deg, #ffc915 0%, #f18c3b 100%); }
   .btn-gd-warning:hover, .btn-gd-warning.hover {
     box-shadow: 0 1px 8px 0 rgba(255, 201, 21, 0.6); }
   .btn-gd-warning:focus, .btn-gd-warning.focus {
@@ -2576,13 +2589,13 @@ template {
     box-shadow: 0 0 3px 0 rgba(255, 201, 21, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
 
 .btn-gd-danger {
-  background: linear-gradient(135deg, #f17c35 0%, #e2336e 100%); }
+  background: linear-gradient(135deg, #f18c3b 0%, #e2336e 100%); }
   .btn-gd-danger:hover, .btn-gd-danger.hover {
-    box-shadow: 0 1px 8px 0 rgba(241, 124, 53, 0.6); }
+    box-shadow: 0 1px 8px 0 rgba(241, 140, 59, 0.6); }
   .btn-gd-danger:focus, .btn-gd-danger.focus {
-    box-shadow: 0 0 2px 0 rgba(241, 124, 53, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 0 2px 0 rgba(241, 140, 59, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
   .btn-gd-danger:not(:disabled):not(.disabled):active, .btn-gd-danger:not(:disabled):not(.disabled).active {
-    box-shadow: 0 0 3px 0 rgba(241, 124, 53, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 0 3px 0 rgba(241, 140, 59, 0.6), inset 0 0 0 3px rgba(0, 0, 0, 0.4); }
 
 .btn2 {
   border-radius: 50px;
@@ -2659,7 +2672,7 @@ template {
   color: #ffffff; }
 
 .badge-warning {
-  background: #ffc915;
+  background: #f18c3b;
   color: #ffffff; }
 
 .badge-success {
@@ -2687,9 +2700,9 @@ template {
   color: #ffffff; }
 
 .badge-gd-warning {
-  background: linear-gradient(135deg, #ffc915 0%, #f17c35 100%), #ffc915;
+  background: linear-gradient(135deg, #ffc915 0%, #f18c3b 100%), #ffc915;
   color: #ffffff; }
 
 .badge-gd-danger {
-  background: linear-gradient(135deg, #f17c35 0%, #e2336e 100%), #f17c35;
+  background: linear-gradient(135deg, #f18c3b 0%, #e2336e 100%), #f18c3b;
   color: #ffffff; }
